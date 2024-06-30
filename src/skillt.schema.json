@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "$id": "skillt.schema.json",
+  "title": "skillt",
+  "description": "A skill-tree JSON schema for skillt, a skill-tree visualizer",
+  "type": "object",
+  "properties": {
+    "skillGroup": {
+      "properties": {
+        "groupTitle": {
+          "description": "The title of the grouping of skills.",
+          "type": "string"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "skillId": {
+                "description": "The numeric identifier assigned to an individual skill.",
+                "type": "number"
+              },
+              "skillTitle": {
+                "description": "The title of the skill.",
+                "type": "string"
+              },
+              "skillDescription": {
+                "description": "The description of the skill.",
+                "type": "string"
+              },
+              "skillPrerequisites": {
+                "description": "The collection of identifiers of pre-requisite skills.",
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

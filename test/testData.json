@@ -1,0 +1,19 @@
+{
+  "skillGroup": {
+    "groupTitle": "Basic Skills",
+    "skills": [
+      {
+        "skillId": 1,
+        "skillTitle": "Reading",
+        "skillDescription": "Take a look, it's in a book...",
+        "skillPrerequisites": []
+      },
+      {
+        "skillId": 9001,
+        "skillTitle": "Writing",
+        "skillDescription": "Famously blocked.",
+        "skillPrerequisites": [1]
+      }
+    ]
+  }
+}
